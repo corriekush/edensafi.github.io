@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdenSafi - We Feel To Feel Your Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- FIRST NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <div class="logo">
+      <img src="logo.png" alt="EdenSafi Logo" id="home-logo">
+    </div>
+    <div class="brand-text">
+      <h1 class="brand-name">EdenSafi</h1>
+      <p class="subtitle">We Fill, To Feel Your Shop</p>
+    </div>
+
+    <!-- Language dropdown -->
+    <div class="language-dropdown">
+      <div class="dropdown-selected" tabindex="0">
+        <span class="selected-text">English</span>
+        <span class="chev">▾</span>
+      </div>
+      <ul class="dropdown-options">
+        <li data-lang="en">English</li>
+        <li data-lang="fr">French</li>
+        <li data-lang="de">German</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar-right">
+    <!-- Social icons -->
+    <a href="https://www.facebook.com/share/17PRu2TBhp/" target="_blank" style="--color:#1877f2;"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/edensafi1" target="_blank" style="--color:#fd1d1d;"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@eden_safi" target="_blank" style="--color:#4de8f4;"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://wa.me/254797606263" target="_blank" style="--color:#25d366;"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Cart -->
+    <div class="cart-icon">
+      <a href="#cart" aria-label="Shopping Cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- SECOND NAVBAR -->
+<nav class="second-navbar">
+  <a href="#news">News</a>
+  <a href="#shop">Shop/Market</a>
+
+  <!-- Visit dropdown -->
+  <div class="visit-dropdown">
+    <div class="dropdown-selected" tabindex="0">
+      <span>Visit</span>
+      <span class="chev">▾</span>
+    </div>
+    <ul class="dropdown-options">
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="#subscribe">Subscribe</a></li>
+      <li><a href="#farmer">Farmer</a></li>
+      <li><a href="#customer">Customer</a></li>
+      <li><a href="#advertise">Advertise</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+  </div>
+
+  <a href="#products">Product</a>
+</nav>
+
+<!-- Overlay for animated background -->
+<div class="overlay"></div>
+
+<!-- 🛒 Cart Panel -->
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <strong id="cartTotal">KSh 0.00</strong>
+    </div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+</div>
+
+
+<!-- Featured Products Section -->
+<section class="featured-products">
+  <h2>Featured Products</h2>
+  <div class="carousel-container">
+    <button class="prev-btn">❮</button>
+    <div class="carousel">
+      <div class="product" data-name="Oranges" data-price="1299">
+        <img src="oranges.jpg" alt="Oranges">
+        <p class="price">$12.99</p>
+      </div>
+      <div class="product" data-name="Order-Kit" data-price="1949">
+        <img src="order.jpg" alt="Order Kit">
+        <p class="price">$19.49</p>
+      </div>
+      <div class="product" data-name="Sales-Boost" data-price="2499">
+        <img src="sales.jpg" alt="Sales Boost">
+        <p class="price">$24.99</p>
+      </div>
+      <div class="product" data-name="Rise-Kit" data-price="1599">
+        <img src="rise.jpg" alt="Rise Kit">
+        <p class="price">$15.99</p>
+      </div>
+ <div class="product" data-name="Phone Case" data-price="1500">
+    <img src="phonecase.png" alt="Phone Case">
+    <div class="price">Ksh 1,500</div>
+  </div>
+  <div class="product" data-name="Social Mngt Service" data-price="2000">
+    <img src="social mngt.jpg" alt="Social Management Service">
+    <div class="price">Ksh 2,000</div>
+  </div>
+  <div class="product" data-name="Social Media Course" data-price="3000">
+    <img src="socialmedia.jpg" alt="Social Media Course">
+    <div class="price">Ksh 3,000</div>
+  </div>
+  <div class="product" data-name="Citric Fruit Assortment" data-price="1800">
+    <img src="citric.jpg" alt="Citric Fruit Assortment">
+    <div class="price">Ksh 1,800</div>
+  </div>
+  <div class="product" data-name="Men's Wear" data-price="2200">
+    <img src="men's wear.jpg" alt="Men's Wear">
+    <div class="price">Ksh 2,200</div>
+  </div>
+  <div class="product" data-name="Dress" data-price="2800">
+    <img src="dress.png" alt="Dress">
+    <div class="price">Ksh 2,800</div>
+  </div>
+</div>
+    <button class="next-btn">❯</button>
+  </div>
+</section>
+
+<!-- 🍊 Citric Fruits Category -->
+<section class="product-category">
+  <h2 class="category-title">🍊 Citric Fruits</h2>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" id="prevCitric">&#10094;</button>
+
+    <div class="product-carousel" id="citricCarousel">
+      <!-- Example Citric Fruit Products -->
+      <div class="product-card" data-name="Oranges" data-price="120">
+        <img src="oranges.jpg" alt="Oranges">
+        <h4>Oranges</h4>
+        <p>KSh 120</p>
+      </div>
+
+      <div class="product-card" data-name="Lemons" data-price="100">
+        <img src="phonecase.png" alt="Lemons">
+        <h4>Lemons</h4>
+        <p>KSh 100</p>
+      </div>
+
+      <div class="product-card" data-name="Tangerines" data-price="140">
+        <img src="dress.png" alt="Tangerines">
+        <h4>Tangerines</h4>
+        <p>KSh 140</p>
+      </div>
+
+      <div class="product-card" data-name="Limes" data-price="110">
+        <img src="sales.jpg" alt="Limes">
+        <h4>Limes</h4>
+        <p>KSh 110</p>
+      </div>
+
+      <div class="product-card" data-name="Grapefruits" data-price="180">
+        <img src="rise.jpg" alt="Grapefruits">
+        <h4>Grapefruits</h4>
+        <p>KSh 180</p>
+      </div>
+
+      <div class="product-card" data-name="Mandarins" data-price="130">
+        <img src="men's wear.jpg" alt="Mandarins">
+        <h4>Mandarins</h4>
+        <p>KSh 130</p>
+      </div>
+    </div>
+
+    <button class="carousel-btn next" id="nextCitric">&#10095;</button>
+  </div>
+</section>
+
+<!-- ==========================
+     ELECTRONICS CATEGORY
+========================== -->
+<section class="category-section">
+  <h2 class="category-title">Electronics</h2>
+
+  <div class="electronics-carousel-container">
+    <button id="prevElectronics" class="carousel-btn prev-btn">&#10094;</button>
+
+    <div id="electronicsCarousel" class="electronics-carousel">
+      <!-- Product 1 -->
+      <div class="product-card" 
+           data-name="Smartphone X20"
+           data-price="25999"
+           data-description="6.5-inch display, 128GB storage, 48MP camera">
+        <img src="furniture.png" alt="Smartphone X20">
+        <h4>Smartphone X20</h4>
+        <p>KSh 25,999</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card"
+           data-name="Wireless Headphones"
+           data-price="6999"
+           data-description="Bluetooth noise-cancelling headphones">
+        <img src="fashion.png" alt="Wireless Headphones">
+        <h4>Wireless Headphones</h4>
+        <p>KSh 6,999</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card"
+           data-name="Smartwatch S5"
+           data-price="8999"
+           data-description="Heart-rate monitor, GPS, waterproof">
+        <img src="furniture.png" alt="Smartwatch S5">
+        <h4>Smartwatch S5</h4>
+        <p>KSh 8,999</p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card"
+           data-name="Laptop Pro 15"
+           data-price="84999"
+           data-description="Intel i7, 16GB RAM, 512GB SSD">
+        <img src="furniture.png" alt="Laptop Pro 15">
+        <h4>Laptop Pro 15</h4>
+        <p>KSh 84,999</p>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card"
+           data-name="4K LED TV 43-inch"
+           data-price="45999"
+           data-description="Smart TV with HDR and Netflix support">
+        <img src="dress.png" alt="4K LED TV 43-inch">
+        <h4>4K LED TV 43-inch</h4>
+        <p>KSh 45,999</p>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card"
+           data-name="Bluetooth Speaker"
+           data-price="3499"
+           data-description="Portable speaker with deep bass">
+        <img src="dress.png" alt="Bluetooth Speaker">
+        <h4>Bluetooth Speaker</h4>
+        <p>KSh 3,499</p>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card"
+           data-name="Tablet A10"
+           data-price="19999"
+           data-description="10-inch screen, 64GB storage, Android 12">
+        <img src="men's wear.jpg" alt="Tablet A10">
+        <h4>Tablet A10</h4>
+        <p>KSh 19,999</p>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card"
+           data-name="Gaming Console Z"
+           data-price="65999"
+           data-description="Next-gen graphics, 1TB storage">
+        <img src="order.jpg" alt="Gaming Console Z">
+        <h4>Gaming Console Z</h4>
+        <p>KSh 65,999</p>
+      </div>
+    </div>
+
+    <button id="nextElectronics" class="carousel-btn next-btn">&#10095;</button>
+  </div>
+</section>
+
+<!-- ==========================
+     FURNITURES CATEGORY
+========================== -->
+<section class="category-section">
+  <h2 class="category-title">FURNITURES</h2>
+
+  <div class="furnitures-carousel-container">
+    <button id="prevfurnitures" class="carousel-btn prev-btn">&#10094;</button>
+
+    <div id="furnitureCarousel" class="furniture-carousel">
+      <!-- Product 1 -->
+      <div class="product-card" 
+           data-name="Smartphone X20"
+           data-price="25999"
+           data-description="6.5-inch display, 128GB storage, 48MP camera">
+        <img src="furniture.png" alt="Smartphone X20">
+        <h4>Smartphone X20</h4>
+        <p>KSh 25,999</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card"
+           data-name="Wireless Headphones"
+           data-price="6999"
+           data-description="Bluetooth noise-cancelling headphones">
+        <img src="fashion.png" alt="Wireless Headphones">
+        <h4>Wireless Headphones</h4>
+        <p>KSh 6,999</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card"
+           data-name="Smartwatch S5"
+           data-price="8999"
+           data-description="Heart-rate monitor, GPS, waterproof">
+        <img src="furniture.png" alt="Smartwatch S5">
+        <h4>Smartwatch S5</h4>
+        <p>KSh 8,999</p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card"
+           data-name="Laptop Pro 15"
+           data-price="84999"
+           data-description="Intel i7, 16GB RAM, 512GB SSD">
+        <img src="furniture.png" alt="Laptop Pro 15">
+        <h4>Laptop Pro 15</h4>
+        <p>KSh 84,999</p>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card"
+           data-name="4K LED TV 43-inch"
+           data-price="45999"
+           data-description="Smart TV with HDR and Netflix support">
+        <img src="dress.png" alt="4K LED TV 43-inch">
+        <h4>4K LED TV 43-inch</h4>
+        <p>KSh 45,999</p>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card"
+           data-name="Bluetooth Speaker"
+           data-price="3499"
+           data-description="Portable speaker with deep bass">
+        <img src="dress.png" alt="Bluetooth Speaker">
+        <h4>Bluetooth Speaker</h4>
+        <p>KSh 3,499</p>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card"
+           data-name="Tablet A10"
+           data-price="19999"
+           data-description="10-inch screen, 64GB storage, Android 12">
+        <img src="men's wear.jpg" alt="Tablet A10">
+        <h4>Tablet A10</h4>
+        <p>KSh 19,999</p>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card"
+           data-name="Gaming Console Z"
+           data-price="65999"
+           data-description="Next-gen graphics, 1TB storage">
+        <img src="order.jpg" alt="Gaming Console Z">
+        <h4>Gaming Console Z</h4>
+        <p>KSh 65,999</p>
+      </div>
+    </div>
+
+    <button id="nextFurniture" class="carousel-btn next-btn">&#10095;</button>
+  </div>
+</section>
+
+<!-- ==========================
+     FRESH-VEGETABLES CATEGORY
+========================== -->
+<section class="category-section">
+  <h2 class="category-title">🥦FRESH-VEGETABLES</h2>
+
+  <div class="fresh-vegetables-carousel-container">
+    <button id="prevFresh-vegetables" class="carousel-btn prev-btn">&#10094;</button>
+
+    <div id="fresh-vegetablesCarousel" class="fresh-vegetables-carousel">
+      <!-- Product 1 -->
+      <div class="product-card" 
+           data-name="Smartphone X20"
+           data-price="25999"
+           data-description="6.5-inch display, 128GB storage, 48MP camera">
+        <img src="furniture.png" alt="Smartphone X20">
+        <h4>Smartphone X20</h4>
+        <p>KSh 25,999</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card"
+           data-name="Wireless Headphones"
+           data-price="6999"
+           data-description="Bluetooth noise-cancelling headphones">
+        <img src="fashion.png" alt="Wireless Headphones">
+        <h4>Wireless Headphones</h4>
+        <p>KSh 6,999</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card"
+           data-name="Smartwatch S5"
+           data-price="8999"
+           data-description="Heart-rate monitor, GPS, waterproof">
+        <img src="furniture.png" alt="Smartwatch S5">
+        <h4>Smartwatch S5</h4>
+        <p>KSh 8,999</p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card"
+           data-name="Laptop Pro 15"
+           data-price="84999"
+           data-description="Intel i7, 16GB RAM, 512GB SSD">
+        <img src="furniture.png" alt="Laptop Pro 15">
+        <h4>Laptop Pro 15</h4>
+        <p>KSh 84,999</p>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card"
+           data-name="4K LED TV 43-inch"
+           data-price="45999"
+           data-description="Smart TV with HDR and Netflix support">
+        <img src="dress.png" alt="4K LED TV 43-inch">
+        <h4>4K LED TV 43-inch</h4>
+        <p>KSh 45,999</p>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card"
+           data-name="Bluetooth Speaker"
+           data-price="3499"
+           data-description="Portable speaker with deep bass">
+        <img src="dress.png" alt="Bluetooth Speaker">
+        <h4>Bluetooth Speaker</h4>
+        <p>KSh 3,499</p>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card"
+           data-name="Tablet A10"
+           data-price="19999"
+           data-description="10-inch screen, 64GB storage, Android 12">
+        <img src="men's wear.jpg" alt="Tablet A10">
+        <h4>Tablet A10</h4>
+        <p>KSh 19,999</p>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card"
+           data-name="Gaming Console Z"
+           data-price="65999"
+           data-description="Next-gen graphics, 1TB storage">
+        <img src="order.jpg" alt="Gaming Console Z">
+        <h4>Gaming Console Z</h4>
+        <p>KSh 65,999</p>
+      </div>
+    </div>
+
+    <button id="nextFresh-vegetables" class="carousel-btn next-btn">&#10095;</button>
+  </div>
+</section>
+
+<section class="services-section">
+    <h2 class="section-title">✨ Hire Our Expert Services</h2>
+
+    <div class="services-container">
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="social_mngr_avatar.jpg" alt="Social Media Manager">
+                    <h4>Social Media Manager</h4>
+                    <p>Click to see details and hire</p>
+                </div>
+                <div class="service-card-back">
+                    <div class="description">
+                        **Social Media Manager**
+                        <br><br>
+                        We handle all your content creation, posting, and community engagement across major platforms (Instagram, Facebook, Twitter, TikTok). Focus on your business; we'll focus on growth.
+                    </div>
+                    <button class="hire-btn" 
+                            data-service="Social Media Manager" 
+                            data-price="Monthly Rate: KSh 30,000">
+                        Hire Now (KSh 30,000/Mo)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="sales_mngr_avatar.jpg" alt="Sales Manager">
+                    <h4>Sales Manager (Virtual)</h4>
+                    <p>Click to see details and hire</p>
+                </div>
+                <div class="service-card-back">
+                    <div class="description">
+                        **Virtual Sales Manager**
+                        <br><br>
+                        Boost your revenue with professional pipeline management, client acquisition strategies, and sales team training, all handled remotely by an experienced expert.
+                    </div>
+                    <button class="hire-btn" 
+                            data-service="Virtual Sales Manager" 
+                            data-price="Monthly Rate: KSh 45,000">
+                        Hire Now (KSh 45,000/Mo)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="seo_specialist_avatar.jpg" alt="SEO Specialist">
+                    <h4>SEO Specialist</h4>
+                    <p>Click to see details and hire</p>
+                </div>
+                <div class="service-card-back">
+                    <div class="description">
+                        **Search Engine Optimization**
+                        <br><br>
+                        Dominate search rankings. We conduct comprehensive audits, keyword research, and on-page/off-page strategies to drive organic, high-intent traffic to your website.
+                    </div>
+                    <button class="hire-btn" 
+                            data-service="SEO Specialist" 
+                            data-price="Project Rate: KSh 50,000">
+                        Hire Now (KSh 50,000/Project)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="designer_avatar.jpg" alt="Graphics Designer">
+                    <h4>Graphics Designer</h4>
+                    <p>Click to see details and hire</p>
+                </div>
+                <div class="service-card-back">
+                    <div class="description">
+                        **Freelance Graphics Design**
+                        <br><br>
+                        Get stunning visuals for your brand. Logos, banners, pitch decks, and digital assets designed to convert. Fast turnaround and professional quality guaranteed.
+                    </div>
+                    <button class="hire-btn" 
+                            data-service="Graphics Designer" 
+                            data-price="Hourly Rate: KSh 3,500">
+                        Hire Now (KSh 3,500/Hr)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- 🧾 Checkout Modal -->
+<div id="checkoutModal" class="checkout-modal hidden">
+  <div class="checkout-content">
+    <h2>Checkout Details</h2>
+    <form id="checkoutForm">
+      <label>Full Name</label>
+      <input type="text" id="customerName" placeholder="Enter your name" required />
+
+      <label>Phone Number</label>
+      <input type="tel" id="customerPhone" placeholder="07XXXXXXXX" required />
+
+      <div class="checkout-buttons">
+        <button type="submit" class="send-order">Send Order via WhatsApp</button>
+        <button type="button" class="cancel-checkout">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 🧾 EdenSafi Checkout Modal -->
+<div id="checkoutModal" class="checkout-modal hidden">
+  <div class="checkout-content">
+    <h2>Checkout</h2>
+    <p class="checkout-note">Please confirm your details to complete the order.</p>
+
+    <form id="checkoutForm">
+      <label for="customerName">Full Name</label>
+      <input type="text" id="customerName" placeholder="Enter your name" required />
+
+      <label for="customerPhone">Phone Number</label>
+      <input type="tel" id="customerPhone" placeholder="07XXXXXXXX" required />
+
+      <div class="checkout-buttons">
+        <button type="submit" class="send-order">Send via WhatsApp</button>
+        <button type="button" class="cancel-checkout">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-section footer-about">
+            <div class="footer-logo-area">
+                <img src="logo.png" alt="EdenSafi Logo"> 
+                <div class="footer-brand-text">
+                    <span class="brand-name">EdenSafi</span>
+                    <span class="subtitle">Your Source for Growth</span>
+                </div>
+            </div>
+            <p>
+                EdenSafi is dedicated to fostering growth by connecting consumers with quality products and offering essential business services. We bridge the gap between excellence and accessibility.
+            </p>
+            <p style="margin-top: 10px;">
+                Email: <a href="mailto:info@edensafi.com" style="color: #ff9800; text-decoration: none;">info@edensafi.com</a>
+            </p>
+        </div>
+
+        <div class="footer-section footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#featured">Featured Products</a></li>
+                <li><a href="#electronics">Electronics</a></li>
+                <li><a href="#services">Hire Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section footer-links">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank" title="Facebook">f</a> 
+                <a href="#" target="_blank" title="Twitter">t</a>
+                <a href="#" target="_blank" title="Instagram">i</a>
+                <a href="https://wa.me/254703654000" target="_blank" title="WhatsApp">w</a>
+            </div>
+            <h4 style="margin-top: 25px;">Customer Care</h4>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Support Center</a></li>
+                <li><a href="#">Start a Return</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section footer-form">
+            <h4>Partner With Us</h4>
+            <p>Are you a farmer, artisan, or vendor? Join our network to reach thousands of customers!</p>
+            <form class="farmer-signup">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Sign Up Now</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2024 EdenSafi. All Rights Reserved. Designed for Growth.
+    </div>
+</footer>
+
+<script src="javascript.js"></script>
+</body>
+</html>
